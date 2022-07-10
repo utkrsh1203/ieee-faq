@@ -1,0 +1,147 @@
+.App,
+.App::before,
+::after{
+    margin: 0;
+    padding: 0;
+   
+}
+.App{
+    font-size: .8rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+   
+    height:100%;
+    
+}
+
+
+/* used for centering*/
+section{
+  background-color:#ffffff;
+    display: flex;
+  min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+   
+  .container{
+  display: flex;
+  flex-wrap: wrap;
+    width:80%;
+    margin: 0 auto;
+    align-items: center;
+  justify-content: space-around;
+    padding: 0 1.5rem;
+
+  
+}
+h1{
+    width:100%;
+    text-align: center;
+    font-size: 2.5rem;
+    color:orangered ;
+    margin-bottom: 25px;
+}
+
+.image{
+    width:45%;
+}
+
+.mainimage{ width:100%;
+    height:auto;
+}
+  
+
+
+.faq{
+   width:50%;
+   }
+
+@media(max-width:815px){
+    .faq{
+        width:100%;
+    max-width: 80rem;
+    }
+    .image{
+      /*  margin-bottom: 36px;
+        */
+        width:90%;
+    }
+    .container{
+        width:100%;
+    }
+   }
+
+.que{
+    background-color: #283042;
+  
+    border-radius: .4rem;
+    box-shadow: .5rem 2px .5rem rgba(0,0,0,0.1);
+    padding: 0.7rem ;
+    margin-bottom:1rem;
+   
+}
+
+.link{
+    font-size: .8rem;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    width:100%;
+    padding: 0.7rem 0;
+    color:rgba(255,255,255,.8);
+  
+}
+.link .minus{
+padding: .4rem;
+}
+.link .plus{
+    padding: .4rem;
+    }
+.link .minus{
+    display: none;
+}
+
+.ans{
+  max-height: 0px;
+    overflow:hidden;
+    position: relative;
+    background-color:#212838;
+   transition: max-height 650ms;
+}  
+
+.ans ::before{content:"";
+position: absolute;
+width:.6rem;
+height:90%;
+background-color: #ffffff;
+top:50%;
+left:0;
+transform: translateY(-50%);
+
+}
+.ans p{
+    padding:.5rem 1rem;
+    font-size:.8rem;
+    color:rgba(255,255,255,.6);
+    text-align: justify;
+    
+    
+    
+}
+.que:target .ans{
+    max-height: 15rem;
+  
+
+}
+.que:target .link .plus{
+    display: none;
+    
+}
+.que:target .link .minus{
+    display: block;
+}
+
